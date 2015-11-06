@@ -76,6 +76,14 @@ La idea de este repositorio es hacer usar el poder de HTML5 API para crear ejemp
 	- Descripción: Los Flametroopers son soldados imperiales especializados de la Primer Orden. Portan armas incendiarias que pueden transformar cualquier campo de batalla en una llamarada infernal.
 
 
+### Demos:
+
+**Geoposicionamiento**
+
+- Usuario y los cascos en un mapa (Google Maps)
+![captura_](img/captura_helmets_map.png)
+[código](demos/helmets_map.html)
+
 ### Agradecimientos y creditos:
 
 - Imágenes y textos (documentación):
