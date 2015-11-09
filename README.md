@@ -2,7 +2,7 @@
 
 ![foto](http://i.blogs.es/2d5d4a/first-order-stormtrooper/2560_3000.jpg)
 
-Como puedes ver... Madrid ha sido invadida por cascos gigantes de Star Wars! Estarán en al ciudad las próximas semanas (30/10/2015-30/11/2015).
+Como puedes ver... Madrid ha sido invadida por cascos gigantes de Star Wars! Estarán en la ciudad las próximas semanas (30/10/2015-30/11/2015).
 
 La idea de este repositorio es hacer usar el poder de HTML5 API para crear ejemplos y aplicaciones interactivas usando como excusa [los ocho cascos gigantes repartidos por toda la ciudad](http://hipertextual.com/2015/10/cascos-de-star-wars-en-madrid).
 
@@ -84,6 +84,12 @@ La idea de este repositorio es hacer usar el poder de HTML5 API para crear ejemp
 ![captura_](img/captura_helmets_map.png)
 [código](demos/helmets_map.html)
 
+
+- Usuario y los cascos en un mapa incluida la distancia desde nuestra posición (en linea recta)
+![captura_](img/captura_helmets_distance.png)
+[código](demos/helmets_distance.html)
+
+
 ### Agradecimientos y creditos:
 
 - Imágenes y textos (documentación):
@@ -97,3 +103,20 @@ La idea de este repositorio es hacer usar el poder de HTML5 API para crear ejemp
 	
 	- [Iconfinder](https://www.iconfinder.com/)
 	- [Face the force](http://facetheforce.com/)
+
+- [Chuck](http://stackoverflow.com/users/1921/chuck) por facilitar la [función getDistanceFromLatLonInKm](http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula)
+```javascript
+	function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+	  var R = 6371;
+	  var dLat = (lat2-lat1) * (Math.PI/180);
+	  var dLon = (lon2-lon1) * (Math.PI/180);
+	  var a =
+	    Math.sin(dLat/2) * Math.sin(dLat/2) +
+	    Math.cos(lat1 * (Math.PI/180)) * Math.cos(lat2 * (Math.PI/180)) *
+	    Math.sin(dLon/2) * Math.sin(dLon/2)
+	    ;
+	  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+	  var d = R * c;
+	  return d;
+	}
+```
